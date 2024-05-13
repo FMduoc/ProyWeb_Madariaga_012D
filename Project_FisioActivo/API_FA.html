@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FisioActivo</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/reloj.js"></script>
+    
+</head>
+<body>
+
+    <!-- HEADER/NAV -->
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4" id="barraNav">
+        <a href="index.html" id="logoFisioActivo">
+            <img src="img/logo.png" alt="logo" style="width: 40px;">FisioActivo
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#INICIO">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#SERVICIOS">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#METODOS">Métodos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">Sobre nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="galeria.html">Galería</a>
+              </li>
+            </ul>
+            <form class="form-inline mt-2 mt-md-0">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="index.html" id="socialMediaShare">
+                            <img src="img/w_icon.png" alt="imagen" style="width: 30px;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" id="socialMediaShare">
+                            <img src="img/twitter.png" alt="imagen" style="width: 30px;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" id="socialMediaShare">
+                            <img src="img/instagram.png" alt="imagen" style="width: 30px;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="index.html" id="socialMediaShare">
+                          <img src="img/facebook.png" alt="imagen" style="width: 30px;">
+                      </a>
+                  </li>
+                </ul>
+            </form>
+            <div>
+                <a href="horario.html">
+                    <button style="background-color: rgb(20, 171, 247); color: white; border: none; padding: 10px 20px; border-radius: 4px; margin: 0px 5px;">Agendar hora</button>
+                </a>
+                <a href="registro.html">
+                    <button style="background-color: rgb(20, 171, 247); color: white; border: none; padding: 10px 20px; border-radius: 4px; margin: 0px 5px;">Registrarme</button>
+                </a>
+                <a href="login.html">
+                    <button style="background-color: rgb(20, 171, 247); color: white; border: none; padding: 10px 20px; border-radius: 4px; margin: 0px 5px;">Iniciar sesión</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- API REST GET -->
+
+    <br><br>
+    <h1 style="text-align: center;">Ver datos de usuarios</h1>
+    <br><br>
+    <div id="botonAPI">
+        <button type="button" id="enviar" style="background-color: rgb(20, 171, 247); color: white; border: none; padding: 10px 20px; border-radius: 4px;">Cargando datos</button>
+    </div>
+    <br><br>
+    <table class="table" id="users">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Email</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Contraseña</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- FOOTER -->
+
+    <main role="main" id="container">
+
+    <br><br>
+
+        <footer class="bg-dark text-light pt-5 pb-4">
+            <div class="row col-12 tex-center text-md-start">
+                <div class="col-md-2 col-lg-2 col-x1-2 mx-auto mt-3">
+                    <div class="row text-center text-md-start">
+                        <img src="img/logo.png" alt="fisioactivo" 
+                        style="margin-right: 10px; margin-left: 15px; width: 30px;">
+                    </div>
+                    <br><br><br><br><br><br>
+                    <!-- API PÚBLICO RELOJ -->
+                    <div class="reloj"></div>
+                </div>
+      
+                <div class="col-md-2 col-lg-2 col-x1-2 mx-auto mt-3"> 
+                    <strong>Sitio</strong>
+                    <hr class="mb-4">
+                    <div class="row text-center text-md-start">
+                        <a href="#INICIO" style="margin-right: 10px; margin-left: 15px;">Inicio</a>
+                    </div>
+                    <div class="row text-center text-md-start">
+                        <a href="#SERVICIOS" style="margin-right: 10px; margin-left: 15px;">Servicios</a>
+                    </div>
+                    <div class="row text-center text-md-start">
+                        <a href="#METODOS" style="margin-right: 10px; margin-left: 15px;">Métodos</a>
+                    </div>
+                    <div class="row text-center text-md-start">
+                        <a href="about.html" style="margin-right: 10px; margin-left: 15px;">Sobre nosotros</a>
+                    </div>
+                    <div class="row text-center text-md-start">
+                        <a href="galeria.html" style="margin-right: 10px; margin-left: 15px;">Galería</a>
+                    </div>
+                </div>
+      
+                <div class="col-md-4 col-lg-4 col-x1-2 mx-auto mt-3">
+                </div>
+      
+                <div class="col-md-2 col-lg-2 col-x1-2 mx-auto mt-3">
+                    <strong>Síguenos</strong>
+                    <hr>
+                    <div class="row text-center text-md-start">
+                        <img src="img/w_icon.png" alt="whastapp" 
+                            style="margin-right: 10px; margin-left: 15px; width: 30px;">
+                        <img src="img/twitter.png" alt="twitter" 
+                            style="margin-right: 10px; margin-left: 15px; width: 30px;">
+                        <img src="img/instagram.png" alt="instagram" 
+                            style="margin-right: 10px; margin-left: 15px; width: 30px;">
+                        <img src="img/facebook.png" alt="facebook" 
+                            style="margin-right: 10px; margin-left: 15px; width: 30px;">
+                    </div>
+                </div>
+      
+                <div class="col-md-2 col-lg-2 col-x1-2 mx-auto mt-3">
+                    <strong>Contacto</strong>
+                    <hr>
+                    <div class="row text-center text-md-start">
+                        <img src="img/mapa.png" alt="mapa" 
+                        style="margin-right: 10px; margin-left: 15px; width: 30px;">
+                        <p>Av. ?????, Maipú</p>
+                    </div>
+                    <div class="row">
+                        <img src="img/fono.png" alt="fono"
+                        style="margin-right: 10px; margin-left: 15px; width: 30px;">
+                        <p>9999999999</p>
+                    </div>
+                    <div class="row">
+                        <img src="img/mail.png" alt="email"
+                        style="margin-right: 10px; margin-left: 15px; width: 30px;">
+                        <p>erick@fisioactivo.cl</p>
+                    </div>
+                    <br><br>
+                    <p>&copy; FisioActivo - 2024</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- SCRIPT QUE HACE GET DE API REST -->
+
+    <script type="text/javascript">
+        $(document).ready(function()
+            {
+                $("#enviar").click(function()
+                {
+                    $(this).hide();
+                    $.get("http://localhost:3000/users", 
+                    function(data)
+                    {
+                        $.each(data, function(i, item)
+                        {
+                            $("#users").append("<tr><td>" + item.id + "</td><td>" + item.nombre +
+                        "</td><td>" + item.apellido + "</td><td>" + item.email + "</td><td>" + item.direccion + 
+                        "</td><td>" + item.fono + "</td><td>" + item.contrasena + "</td></tr>");
+                            
+                        });
+                    });
+                });
+            })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FisioActivo</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="js/validate.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4" id="barraNav">
+        <a href="index.html" id="logoFisioActivo">
+            <img src="img/logo.png" alt="logo" style="width: 40px;">FisioActivo
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#INICIO">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#SERVICIOS">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#METODOS">Métodos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">Sobre nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="galeria.html">Galería</a>
+              </li>
+            </ul>
+            <form class="form-inline mt-2 mt-md-0">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="index.html" id="socialMediaShare">
+                            <img src="img/w_icon.png" alt="imagen" style="width: 30px;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" id="socialMediaShare">
+                            <img src="img/twitter.png" alt="imagen" style="width: 30px;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" id="socialMediaShare">
+                            <img src="img/instagram.png" alt="imagen" style="width: 30px;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="index.html" id="socialMediaShare">
+                          <img src="img/facebook.png" alt="imagen" style="width: 30px;">
+                      </a>
+                  </li>
+                </ul>
+            </form>
+            <div>
+                <a href="horario.html">
+                    <button style="background-color: rgb(20, 171, 247); color: white; border: none; padding: 10px 20px; border-radius: 4px; margin: 0px 5px;">Agendar hora</button>
+                </a>
+                <a href="registro.html">
+                    <button style="background-color: rgb(20, 171, 247); color: white; border: none; padding: 10px 20px; border-radius: 4px; margin: 0px 5px;">Registrarme</button>
+                </a>
+                <a href="login.html">
+                    <button style="background-color: rgb(20, 171, 247); color: white; border: none; padding: 10px 20px; border-radius: 4px; margin: 0px 5px;">Iniciar sesión</button>
+                </a>
+            </div>
+        </div>
+      </nav>
+
+      <!-- CONTAINER FORMULARIO -->
+
+      <main role="main" id="container">
+        <div class="row jumbotron" id="containerRegister">
+            <div class="col-lg-6">
+                <img src="img/tree.jpg" alt="tree" class="img-fluid">
+            </div>
+            <form action="login.html" method="post" class="col-lg-6" style="background-color: rgb(239, 239, 239);">
+                <div class="mb-4">
+                    <h2 class="h2 mb-2 font-weight-normal"><strong>Iniciar Sesión</strong></h2>
+                    <p>Ingrese su correo electrónico y contraseña.</p>
+                    <div class="form-label-group">
+                        <input type="nombre" name="nombre" id="nombre" placeholder="Nombre" class="form-control" required>
+                        <label for="nombre"></label>
+                    </div>
+                    <div class="form-label-group">
+                        <input type="email" name="email" id="email" placeholder="Correo electrónico" class="form-control" required>
+                        <label for="email"></label>
+                        <!--<small id="email-error" class="form-text text-danger"></small> EN CASO DE USAR OTRO FORMATO DE VALIDACIÓN--> <!-- Aquí se mostrará el mensaje de error -->
+                    </div>
+                    <div class="form-label-group">
+                        <input type="text" name="fono" id="fono" placeholder="Teléfono" class="form-control" required>
+                        <label for="fono"></label>
+                    </div>
+                    <div class="form-label-group">
+                        <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" class="form-control" required>
+                        <label for="password"></label>
+                    </div>
+                    <div class="">
+                        <input class="btn btn-lg btn-primary btn-block" type="submit" value="Iniciar Sesión"
+                        onclick="return validarLogin()">
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+
+        <br><br>
+
+        <!-- FOOTER -->
+
+          <footer class="bg-dark text-light pt-5 pb-4">
+            <div class="row col-12 tex-center text-md-start">
+      
+              <div class="col-md-2 col-lg-2 col-x1-2 mx-auto mt-3">
+                <div class="row text-center text-md-start">
+                  <img src="img/logo.png" alt="fisioactivo" 
+                      style="margin-right: 10px; margin-left: 15px; width: 30px;">
+                </div>
+              </div>
+      
+              <div class="col-md-2 col-lg-2 col-x1-2 mx-auto mt-3"> 
+                <strong>Sitio</strong>
+                <hr class="mb-4">
+                <div class="row text-center text-md-start">
+                  <a href="#INICIO" style="margin-right: 10px; margin-left: 15px;">Inicio</a>
+                </div>
+                <div class="row text-center text-md-start">
+                  <a href="#SERVICIOS" style="margin-right: 10px; margin-left: 15px;">Servicios</a>
+                </div>
+                <div class="row text-center text-md-start">
+                  <a href="#METODOS" style="margin-right: 10px; margin-left: 15px;">Métodos</a>
+                </div>
+                <div class="row text-center text-md-start">
+                  <a href="about.html" style="margin-right: 10px; margin-left: 15px;">Sobre nosotros</a>
+                </div>
+                <div class="row text-center text-md-start">
+                  <a href="galeria.html" style="margin-right: 10px; margin-left: 15px;">Galería</a>
+                </div>
+              </div>
+      
+              <div class="col-md-4 col-lg-4 col-x1-2 mx-auto mt-3">
+              </div>
+      
+              <div class="col-md-2 col-lg-2 col-x1-2 mx-auto mt-3">
+                <strong>Síguenos</strong>
+                <hr>
+                <div class="row text-center text-md-start">
+                  <img src="img/w_icon.png" alt="whastapp" 
+                      style="margin-right: 10px; margin-left: 15px; width: 30px;">
+                  <img src="img/twitter.png" alt="twitter" 
+                      style="margin-right: 10px; margin-left: 15px; width: 30px;">
+                  <img src="img/instagram.png" alt="instagram" 
+                      style="margin-right: 10px; margin-left: 15px; width: 30px;">
+                  <img src="img/facebook.png" alt="facebook" 
+                      style="margin-right: 10px; margin-left: 15px; width: 30px;">
+                </div>
+              </div>
+      
+              <div class="col-md-2 col-lg-2 col-x1-2 mx-auto mt-3">
+                <strong>Contacto</strong>
+                <hr>
+                <div class="row text-center text-md-start">
+                  <img src="img/mapa.png" alt="mapa" 
+                      style="margin-right: 10px; margin-left: 15px; width: 30px;">
+                  <p>Av. ?????, Maipú</p>
+                </div>
+                <div class="row">
+                  <img src="img/fono.png" alt="fono"
+                      style="margin-right: 10px; margin-left: 15px; width: 30px;">
+                  <p>9999999999</p>
+                </div>
+                <div class="row">
+                  <img src="img/mail.png" alt="email"
+                      style="margin-right: 10px; margin-left: 15px; width: 30px;">
+                  <p>erick@fisioactivo.cl</p>
+                </div>
+                <br><br>
+                <p>&copy; FisioActivo - 2024</p>
+              </div>
+            </div>
+          </footer>
+      </main>
+</body>
+</html>
